@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 /**
  * Some predefined delay values (in milliseconds).
  */
@@ -18,6 +20,7 @@ function delayedHello(
   name: string,
   delay: number = Delays.Medium,
 ): Promise<string> {
+  fetch('https://google.fi', { method: 'GET' });
   return new Promise((resolve: (value?: string) => void) =>
     setTimeout(() => resolve(`Hello, ${name}`), delay),
   );
