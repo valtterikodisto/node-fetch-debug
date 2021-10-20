@@ -5,6 +5,7 @@
   "engines": {
     "node": ">= 14.16 <15"
   },
+  "type": "module",
   "devDependencies": {
     "@types/jest": "~27.0.1",
     "@types/node": "~14.14.45",
