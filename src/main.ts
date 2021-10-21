@@ -33,3 +33,17 @@ function delayedHello(
 export async function greeter(name: string) {
   return await delayedHello(name, Delays.Long);
 }
+
+async function fetchRandomData() {
+  const response = await fetch(
+    'https://random-data-api.com/api/stripe/random_stripe',
+    {
+      method: 'GET',
+    },
+  );
+  const jsonData = await response.json();
+
+  console.log(jsonData);
+}
+
+fetchRandomData();
